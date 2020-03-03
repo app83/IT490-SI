@@ -1,1 +1,2 @@
 Flask==1.1.1
+render_template=1.1.1
