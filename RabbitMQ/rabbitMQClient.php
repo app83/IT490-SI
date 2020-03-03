@@ -1,5 +1,3 @@
-// This file will create rabbitMQ Client for DB Server
-
 #!/usr/bin/php
 <?php
 require_once('path.inc');
