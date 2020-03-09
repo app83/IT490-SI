@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 
 define('HOST', getenv('TEST_RABBITMQ_HOST') ? getenv('TEST_RABBITMQ_HOST') : 'localhost');
