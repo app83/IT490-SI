@@ -16,7 +16,7 @@
 
     //Error logging
 
-    error_reporting(E_ALL);
+    //error_reporting(E_ALL);       //Comment as of right now
 
     
 
@@ -60,11 +60,19 @@
 
       {
 
+          case "auth":
+
+              echo "Login Case";
+
+              $response = login($request['user'],$request['pass']);     
+
+              break;
+          
           case "login":
 
               echo "Login Case";
 
-              $response = login($request['email'],$request['pass']);
+              $response = login($request['email'],$request['pass']);     
 
               break;
 
