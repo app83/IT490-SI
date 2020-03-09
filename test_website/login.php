@@ -1,41 +1,33 @@
-
 <?php
-
-
-include ( "accounts.php" );
+include ( "account.php" );
 include ( "myfns.php" ) ;
-#-------------------------------
-error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-ini_set('display_errors' , 1);
-#-------------------------------
-#Connect to Database
 
-$db = mysqli_connect($hostname, $username, $password, $project);
 
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-exit();
+$db = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+if (mysqli_connect_errno()) {
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
 }
-mysqli_select_db( $db, $project );
+#echo "Successfully Connected";
+mysqli_select_db($db, $dbname);
+
 
 $user = $_GET["user"];
 $pass = $_GET["pass"];
 
-#Authenticate User Information and redirect appropriately 
-if ( ! authenticate ( $user, $pass ) ) {
-redirect ( "<br /><center><h1>You have entered invalid login information. Please try again. <br />Redirecting...</h1></center>", "login.html", "$delay" ) ;
-}
+
+if ( ! auth ( $user, $pass ) ) {
+	header("Location: login.html");
+	exit (); 
+} 
 else {
-global $db;
-$s = "select * from A where user = '$user' and pass = '$pass'";
-$t = mysqli_query($db,$s) or die(mysqli_error());
-$r = mysqli_fetch_array($t,MYSQLI_ASSOC);
+	global $db;
+	$s = "SELECT * FROM accounts WHERE user = '$user' AND pass = '$pass'";
+	$t = mysqli_query($db, $s) or die(mysqli_error());
+	$r = mysqli_fetch_array($t,MYSQLI_ASSOC);
+	#echo "Successful Login.";
+	header("refresh: 1; url=mainpage.html");
 
-
-redirect ( "<br /><center><h1>You have successfully logged in." ) ;
-
-}
-
+};
 ?>
 
