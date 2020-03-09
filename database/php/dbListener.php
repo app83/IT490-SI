@@ -80,7 +80,7 @@
 
               
 
-          case "UserBMI":         //Comment the case as of right now
+         /* case "UserBMI":         //Comment the case as of right now
 
               echo "BMI Case";
 
@@ -97,6 +97,8 @@
               $response = allergy($request['email'], $request['A1'],$request['A2'],$request['A3'],$request['A4'],$request['A5'],$request['A6'],$request['A7'],$request['A8'],$request['A9']);
 
               break;
+              
+           */
 
       }
 
