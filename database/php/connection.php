@@ -1,8 +1,8 @@
 #!/usr/bin/php
 <?php
 
-    function connection(){
-        $hostname = "192.168.1.20"; 		
+    //function connection(){
+        $hostname = "192.168.1.30"; 		
         $username = "test1";   
         $project  = "IT490";  
         $password = "password";  
@@ -16,6 +16,6 @@
         
         echo "Connection Established to Database" . PHP_EOL;
         return $connection;
-    }
+    //}
 
 ?>
