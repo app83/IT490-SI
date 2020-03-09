@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-    function connection(){
+//    function connection(){
         $hostname = ""; 		
         $username = "";   
         $project  = "";  
@@ -16,6 +16,6 @@
         
         echo "Connection Established to Database" . PHP_EOL;
         return $connection;
-    }
+ //   }
 
 ?>
