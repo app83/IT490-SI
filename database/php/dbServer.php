@@ -14,7 +14,7 @@
 
     //Error logging
 
-    error_reporting(E_ALL);
+    //error_reporting(E_ALL);           //comment it as ofright now
 
     
 
