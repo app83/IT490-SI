@@ -1,13 +1,13 @@
 #!/usr/bin/php
 <?php
 
-    require_once('../RabbitMQ/path.inc');
+    require_once('../path.inc');
 
-    require_once('../RabbitMQ/get_host_info.inc');
+    require_once('../get_host_info.inc');
 
-    require_once('../RabbitMQ/rabbitMQLib.inc');
+    require_once('../rabbitMQLib.inc');
 
-    //require_once('../RabbitMQ/rabbitMQClient.php');
+    //require_once('../rabbitMQClient.php');
 
     include('connections.php');
 
