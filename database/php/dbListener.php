@@ -3,11 +3,11 @@
 
 
 
-    require_once('../RabbitMQ/path.inc');
+    require_once('../path.inc');
 
-    require_once('../RabbitMQ/get_host_info.inc');
+    require_once('../get_host_info.inc');
 
-    require_once('../RabbitMQ/rabbitMQLib.inc'); 
+    require_once('../rabbitMQLib.inc'); 
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-    $server = new rabbitMQServer("../RabbitMQ/testRabbitMQ.ini","testServer");
+    $server = new rabbitMQServer("../testRabbitMQ.ini","testServer");
 
 
 
