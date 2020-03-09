@@ -26,7 +26,21 @@
 
 
 
+    function auth ($user, $pass ) {
+	global $db;
+	
+	$s = "SELECT * FROM accounts WHERE user='$user' AND pass='$pass' " ;
+	( $t = mysqli_query($db, $s) ) or die ( mysqli_error( $db ) );
 
+	$num = mysqli_num_rows($t) ;
+	
+	if ( $num > 0 ) {
+		return true ;
+	}
+	else {
+		return false ;
+	} ;
+    }
 
     function login($email, $password){
 
