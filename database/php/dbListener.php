@@ -3,11 +3,11 @@
 
 
 
-    require_once('../database/php/path.inc');
+    require_once('../app83/IT490-SI/database/php/path.inc');
 
-    require_once('../database/php/get_host_info.inc');
+    require_once('../app83/IT490-SI/database/php/get_host_info.inc');
 
-    require_once('../database/php/rabbitMQLib.inc'); 
+    require_once('../app83/IT490-SI/database/php/rabbitMQLib.inc'); 
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-    $server = new rabbitMQServer("../database/php/testRabbitMQ.ini","testServer");
+    $server = new rabbitMQServer("../app83/IT490-SI/database/php/testRabbitMQ.ini","testServer");
 
 
 
