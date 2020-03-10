@@ -1,3 +1,5 @@
+#!/usr/bin/php
+
 <?php
 include ( "account.php" );
 include ( "myfns.php" ) ;
