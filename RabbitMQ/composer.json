@@ -1,5 +1,5 @@
 
-//"videlalvaro/php-amqplib": "2.5.*"     Suppose to be inside the brackets. Just for back up. 
+// Commenting: "videlalvaro/php-amqplib": "2.5.*"     Suppose to be inside the brackets. Just for back up. 
 
 {
   "require": {
