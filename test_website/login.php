@@ -1,5 +1,3 @@
-#!/usr/bin/php
-
 <?php
 include ( "account.php" );
 include ( "myfns.php" ) ;
@@ -28,7 +26,7 @@ else {
 	$t = mysqli_query($db, $s) or die(mysqli_error());
 	$r = mysqli_fetch_array($t,MYSQLI_ASSOC);
 	#echo "Successful Login.";
-	header("refresh: 1; url=mainpage.html");
+	header("refresh: 0; url=mainpage.html");
 
 };
 ?>

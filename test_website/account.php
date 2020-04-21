@@ -1,5 +1,3 @@
-#!/usr/bin/php
-
 <?php
 /*
 If not on our router, hostname should be 127.0.0.1

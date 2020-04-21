@@ -255,7 +255,7 @@ button:hover {
 
 .bg-image {
 	background-image: url('../3.jpeg');
-	height: 500px;
+	height: 1440px;
 	filter: blur(4px);
 	-webkit-filter: blur(4px);
 	
