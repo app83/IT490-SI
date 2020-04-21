@@ -25,22 +25,22 @@
       </div>
       <div class="bg-image"> </div>
       <div class="bg-text">
-      <form action="action_page.php">
+      <form action="registration.php" method="post">
         <div class="container">
           <h1 style="margin-bottom: -10px; color: black;">Sign Up</h1>
           <p style="color: black;">Please fill in this form to create an account.</p>
           <hr>
           <div class="input-container" >
           <div style="width: 100%;">
-          <input  type="text" placeholder="Enter First Name" name="fname" required><br>
+          <input  type="text" placeholder="Enter First Name" name="fname" id="fname" required><br>
 
-          <input  type="text" placeholder="Enter Last Name" name="lname" required><br>
+          <input  type="text" placeholder="Enter Last Name" name="lname" id="lname" required><br>
 
-          <input  type="text" placeholder="Enter Email" name="email" required><br>
+          <input  type="text" placeholder="Enter Email" name="email" id="email" required><br>
 
-          <input  type="text" placeholder="Enter Username" name="uname" required><br>
+          <input  type="text" placeholder="Enter Username" name="user" id="user" required><br>
 
-          <input  type="password" placeholder="Enter Password" name="psw" required><br>
+          <input  type="password" placeholder="Enter Password" name="pass" id="pass" required><br>
 
           <input  type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
         </div>
@@ -75,11 +75,12 @@
             <button type="submit" class="signupbtn">Sign Up</button>
           </div> -->
         </div>
-      </form> 
+      <!--</form>-->
       <div class="clearfix">
         <button type="submit" class="signupbtn">Sign Up</button>
         <button type="button" class="cancelbtn">Cancel</button>
       </div>
+</form>
 </div>
     </div>
   </body>
