@@ -1,42 +1,31 @@
 # IT490: Systems Integration - GROUP 5
 
 Project Description
-
-  - Point 1
-  - Point 2
-  - Point 3
-  
-  
   
 
-# Front End / Website:
+# Front-end // Website |
 
-- Description
-
-
-### Main Page
-
-- Description
+Description
 
 
-### Registration
+### Main Page:
+text
 
-- Description
+### Registration:
+text
 
-
-### Login
-
-- Description
+### Login:
+text
 
 ### Output
-
-- Description
-
-# RabbitMQ:
-
-- Description
+text
 
 
-# Back End / Database:
+# RabbitMQ |
 
-- Description
+Description
+
+
+# Back-end // Database |
+
+Description
