@@ -3,7 +3,7 @@
 Project Description
   
 
-# Front-end // Website |
+# Front-end | Website
 
 Description
 
@@ -17,15 +17,15 @@ text
 ### Login:
 text
 
-### Output
+### Output:
 text
 
 
-# RabbitMQ |
+# RabbitMQ
 
 Description
 
 
-# Back-end // Database |
+# Back-end | Database
 
 Description
