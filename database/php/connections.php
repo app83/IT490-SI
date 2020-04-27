@@ -2,7 +2,7 @@
 <?php
 
     function connection(){
-        $hostname = "192.168.1.30"; 		
+        $hostname = "25.12.72.10"; 		
         $username = "test1";   
         $project  = "IT490";  
         $password = "password";  
