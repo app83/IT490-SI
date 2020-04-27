@@ -15,12 +15,17 @@ $callback = function ($msg) {
     echo ' [x] Received ', $msg->body, "\n";
 };
 
+
 $channel->basic_consume('q1', 'e1', false, true, false, false, $callback);
 
 
 while ($channel->is_consuming()) {
     $channel->wait();
 }
+
+
+$ar = array($msg);
+
 
 $channel->close();
 $connection->close();
