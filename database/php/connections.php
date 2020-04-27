@@ -18,4 +18,6 @@
         return $connection;
     }
 
+connection(); //call the function
+
 ?>
