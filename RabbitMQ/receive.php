@@ -11,8 +11,20 @@ $channel->queue_declare('hello', false, false, false, false);
 
 echo " [*] Waiting for messages. To exit press CTRL+C\n";
 
+
 $callback = function ($msg) {
     echo ' [x] Received ', $msg->body, "\n";
+    $aMsg = $msg->body;
+    $newMsg = "[{$aMsg}]";
+    $arr = json_decode($newMsg, true);
+
+    $name = $arr[0]["name"];
+    $email = $arr[0]["email"];
+    $pass = $arr[0]["pass"];
+
+    echo 'name: ',$name, "\n";
+    echo 'email: ',$email, "\n";
+    echo 'pass: ',$pass, "\n";
 };
 
 
@@ -24,7 +36,10 @@ while ($channel->is_consuming()) {
 }
 
 
-$ar = array($msg);
+//$ar = array($msg);
+
+
+
 
 
 $channel->close();
