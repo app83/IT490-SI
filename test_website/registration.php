@@ -18,10 +18,8 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 #POST Data	
 $content = array(
-	"firstName" => $_POST['fname'],
-	"lastName" => $_POST['lname'],
+	"name" => $_POST['name'],
 	"email" => $_POST['email'],
-	"user" => $_POST['user'],
 	"pass" => $_POST['pass']
 );
 
