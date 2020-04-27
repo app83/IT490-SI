@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$hostname = "192.168.1.20"; 		
+$hostname = "25.12.72.10"; 		
 $username = "test1";   
 $project  = "IT490";  
 $password = "password";  
