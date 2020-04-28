@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <title> Register Here </title>
+    <link rel= "stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <!-- added a bootstrap library for styles -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class= "main">
+      <nav>
+        <div class= "logo">
+          <img src= "logo.png" alt="" width="200px" height="100px">
+        </div>
+        <ul class= "nav-bar">
+          <li><a href="mainpage.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="bg-image"> </div>
+      <div class="bg-text">
+      <form action="register.php">
+        <div class="container">
+          <h1 style="margin-bottom: -10px; color: black;">Sign Up</h1>
+          <p style="color: black;">Please fill in this form to create an account.</p>
+          <hr>
+          <div class="input-container" >
+          <div style="width: 100%;">
+          <input  type="text" placeholder="Enter First Name" name="first_name" id="first_name" required><br>
+
+          <input  type="text" placeholder="Enter Last Name" name="last_name" id="last_name" required><br>
+
+          <input  type="text" placeholder="Enter Email" name="email" id="email" required><br>
+
+          <input  type="text" placeholder="Enter Username" name="username" id="username" required><br>
+
+          <input  type="password" placeholder="Enter Password" name="password" id="password" required><br>
+
+          <input  type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+        </div>
+         <div style="width: 100%;">
+          <input  type="number" placeholder="Enter your age" min="0" max="100" step="" value="" name="age" required><br>
+          <div style="display: flex; margin-left: 20%;">
+            <p class="height-label" >Gender</p>
+            <div style="margin: 3%;">
+              <input type="radio" name="gender" value="male" checked><b class="checkbox-label">Male</b>
+            <input type="radio" name="gender" value="female"><b class="checkbox-label">Female</b>
+            </div>
+          </div>
+        <div style="display: flex; margin-left: 20%;">
+          <p class="height-label">Height</p>
+          <input class="height-input" type="number" placeholder="#" min="0" max="10" step=".1" value="" name="height" size="3" id="height"><br>
+
+          <!--<input class="height-input" type="number" placeholder="inches" min="00" max="12" step="" value="" name="height_inch" size="3" id="height_inch"><br>-->
+        </div>
+          <input  type="number" placeholder="Enter your weight in pound" min="0" max="700" step="" value="" name="weight" size="3" id="weight"><br>
+          <input  type="text" placeholder="Enter your zip code" name="zipcode" required><br>
+          </div>
+        </div>
+
+      <!--<div class="clearfix">-->
+        <button name="register" class="signupbtn" type="submit" id="register" value="register">Sign Up</button>
+        <button type="button" class="cancelbtn">Cancel</button>
+      <!--</div>-->
+</form>
+</div>
+    </div>
+  </body>
+</html>
