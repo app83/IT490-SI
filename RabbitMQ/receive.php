@@ -26,7 +26,7 @@ $callback = function ($msg) {
     $pass = $arr[0]["pass"];
     $type = $arr[0]["type"];
 
-    //Prints vars
+    //Prints separated vars
     echo 'name: ',$name, "\n";
     echo 'email: ',$email, "\n";
     echo 'pass: ',$pass, "\n";
