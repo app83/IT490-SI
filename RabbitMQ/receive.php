@@ -13,7 +13,7 @@ echo " [*] Waiting for messages. To exit press CTRL+C\n";
 
 
 $callback = function ($msg) {
-    echo ' [x] Received ', $msg->body, "\n";
+    echo ' [x] Message Received ', $msg->body, "\n";
     
     //Converts msg to string & decodes
     $aMsg = $msg->body;
@@ -24,13 +24,14 @@ $callback = function ($msg) {
     $name = $arr[0]["name"];
     $email = $arr[0]["email"];
     $pass = $arr[0]["pass"];
+    $type = $arr[0]["type"];
 
     //Prints vars
     echo 'name: ',$name, "\n";
     echo 'email: ',$email, "\n";
     echo 'pass: ',$pass, "\n";
+    echo 'type: ',$type, "\n";
 };
-
 
 $channel->basic_consume('q1', 'e1', false, true, false, false, $callback);
 
@@ -39,11 +40,7 @@ while ($channel->is_consuming()) {
     $channel->wait();
 }
 
-
-//$ar = array($msg);
-
-
-
+$ar = array($msg);
 
 
 $channel->close();
