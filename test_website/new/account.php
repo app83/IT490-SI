@@ -1,20 +1,11 @@
-<!--<?php
-        $dbhost = "25.5.139.140"; 		
-        $dbuser = "test1";   
-        $dbname  = "IT490";  
-        $dbpass = "password";
-
-?>-->
-
-
 <?php
 /*
 If not on our router, hostname should be 127.0.0.1
 Change username/project/password to yours as well, if different. 
 */
 
-$dbname = 'IT490';
-$dbuser = 'test';
+$dbname = 'IT490A';
+$dbuser = 'test1';
 $dbpass = 'password';
 $dbhost = '25.5.139.140';
 
@@ -22,5 +13,4 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect t
 mysqli_select_db($connect, $dbname) or die("Could not open the db '$dbname'");
 
 ?>
-
 

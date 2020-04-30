@@ -2,8 +2,8 @@
 <?php
 
     function connection(){
-        $hostname = "25.5.139.140"; 		
-        $username = "test1";   
+        $hostname = "25.5.178.51"; 		
+        $username = "test";   
         $project  = "IT490";  
         $password = "password";  
         
