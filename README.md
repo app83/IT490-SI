@@ -4,12 +4,15 @@ To provide a website for those who are health conscious, so they can keep their 
 
 # Front-end | Website
 This will have the user interface (UI) and the users will be able to interact with the website and as per their choices on the site, the result would be displayed.
+* Register: User will input required details, message will be sent through RabbitMQ, and inserted into an SQL database.
+* Login: User will input required details, message will be sent through RabbitMQ & authenticated.
+* API: User will be able to submit queries and pull information based on their request. 
 
 # RabbitMQ
-This service would work as messenger and would send the request to the correct part of the project.
+Will be used to help communication between the different services; an intermediary service. Assists with sending and receiving messages, primarily for sending registration requests and assisting with login authentication. 
 
-# Back-end | Database
-This will save the users data and would recommend the choices according to the user’s data.
+# Back-end | Database & API
+This will be used to store user information. Will store information such as ID, Name, Email, Password, etc. 
 
 # Authors
 * Ami Patel [RabbitMQ]
