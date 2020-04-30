@@ -10,3 +10,10 @@ This service would work as messenger and would send the request to the correct p
 
 # Back-end | Database
 This will save the users data and would recommend the choices according to the user’s data.
+
+# Authors
+* Ami Patel [RabbitMQ]
+* Krishan Patel [Backend]
+* Purav Patel [Backend]
+* Nishaben Patel [Frontend]
+* Dhruv Patel [RabbitMQ]
