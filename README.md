@@ -13,7 +13,7 @@ This will save the users data and would recommend the choices according to the u
 
 # Authors
 * Ami Patel [RabbitMQ]
-* Krishan Patel [Database/PHP Scripts]
-* Purav Patel [Database]
-* Nishaben Patel [Website]
+* Krishan Patel [Backend]
+* Purav Patel [Backend]
+* Nishaben Patel [Frontend]
 * Dhruv Patel [RabbitMQ]
