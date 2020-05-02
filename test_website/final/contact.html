@@ -1,52 +1,84 @@
 <!DOCTYPE html>
-<html lang="eng">
-  <head>
-    <meta charset="UTF-8">
-    <title>Healthaholics | Contact</title>
-    <link rel= "stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <div class= "main">
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+	<link rel= "stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class= "main">
       <nav>
         <div class= "logo">
-          <img src= "images/logo.png" alt="" width="200" height="100">
+          <img src= "images/healtholic.jpeg" alt="" width="150" height="150">
         </div>
         <ul class= "nav-bar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="register.html">Sign Up</a></li>
-          <li><a href="login.html">Login</a></li>
+	<li><a href="nutritionapi.html">Nutrition</a></li> 
+	<li><a href="bmi2.html">BMI Calculator</a></li> 	
+	 <li><form action="logout.php"><input type="submit" value="Logout"></form></li>	
         </ul>
       </nav>
     </div>
-    <div class="bg-image"> </div> 
-    <div class="bg-text" style="text-align: center;">
-      <h1>Contact</h1>
-      <hr />
-      <div style="display: flex;">
-        <div style="width: 100%;">
-          <img src= "images/location.png" alt="" width="60" height="60">
-          <h2>Address</h2>
-          <p class="about-header">New Jersey Institute of Technology. University Heights Newark NJ 07102-1982</p>
-        </div>
-        <div style="width: 100%;">
-          <img src= "images/phonecall.PNG" alt="" width="60" height="60">
-          <h2>Phone</h2>
-          <p class="about-header">Nisha Patel</p>
-           <p>+1 076=568-9875</p>
-           <p class="about-header">Dhruv Patel</p>
-           <p>+1 076-763-3421</p>
-        </div>
-        <div style="width: 100%;">
-          <img src= "images/email.png" alt="" width="60" height="60">
-          <h2>Email</h2>
-          <p class="about-header">Nisha Patel</p>
-          <p>Nishudp@njit.edu</p>
-          <p class="about-header">Dhruv Patel</p>
-          <p>dhpatel@njit.edu</p>
-        </div>
-      </div>
-      </div>
-  </body>
+    <div class="bg-output"> </div> 
+ <div class="bg-text">
+    <h3>Nutrition Search</h3>
+
+    <input onkeyup="search()"" type=" text" id="myText" value="">
+    <div id="searchresults"></div>
+    <p id="demo"></p>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+
+        var filterData = []
+
+        function search() {
+            var obj, dbParam, xmlhttp, myObj, x, txt = "";
+            obj = { table: "customers", limit: 20 };
+
+            var searchValue = document.getElementById('myText').value
+            axios.get(`https://api.edamam.com/api/food-database/parser?nutrition-type=logging&app_id=07d50733&app_key=80fcb49b500737827a9a23f7049653b9&ingr=${searchValue}`)
+                .then(response => {
+                    var resultsData = response.data.hints;
+                    myObj = resultsData
+                    txt += "<table border='1'><tr><th>Food</th><th>Image</th><th>Energy</th><th>Calories</th></tr>"
+                    $.each(resultsData, function (index, value) {
+                        const food = value.food
+                        const brand = food.brand ? food.brand : ''
+                        const label = food.label ? food.label : ''
+    
+                        const nutrients = food.nutrients
+                        const measures = value.measures
+                        console.log(food, measures)
+                        txt += "<tr><td>" + brand + ''+ label + "</td><td>" + `<img style="width:80px" src=${food.image}></img>` + "</td><td>" + Math.round( nutrients.ENERC_KCAL) + ' kcal' + "</td><td>" + 'protein: ' + Math.round(nutrients.PROCNT) + 'g' +'<br>' + 'Carbs: ' + Math.round(nutrients.FAT) +'g'  + '<br>'+ 'Fat: ' + Math.round(nutrients.CHOCDF) + 'g' + "</td></tr>"
+                    });
+                    txt += "</table>"    
+                    document.getElementById("demo").innerHTML = txt;
+                })
+                .catch(error => {
+                    
+                }
+                );
+        }
+    </script>
+</div>
+</body>
+
 </html>
