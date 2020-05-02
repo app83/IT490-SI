@@ -50,16 +50,16 @@ $email = $_SESSION['email'];
 	<div class= "main">
       <nav>
         <div class= "logo">
-          <img src= "images/logo.png" alt="" width="200" height="100">
+          <img src= "images/healtholic.jpeg" alt="" width="150" height="150">
         </div>
         <ul class= "nav-bar">
 	<li><a href="nutritionapi.html">Nutrition</a></li> 
-	<li><a href="bmi.php">BMI Calculator</a></li> 	
+	<li><a href="bmi2.html">BMI Calculator</a></li> 	
 	 <li><form action="logout.php"><input type="submit" value="Logout"></form></li>	
         </ul>
       </nav>
     </div>
-    <div class="bg-image"> </div> 
+    <div class="bg-output"> </div> 
  <div class="bg-text">
     <h3>Nutrition Search</h3>
 
