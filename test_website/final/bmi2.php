@@ -35,9 +35,25 @@ $email = $_SESSION['email'];
         </style>
         <title>BMI Calculator</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        
+        <link rel= "stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+	<div class= "main">
+      <nav>
+        <div class= "logo">
+          <img src= "images/healtholic.jpeg" alt="" width="100" height="100">
+        </div>
+        <ul class= "nav-bar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+	  <li><a href="register.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bg-image"> </div> 
+    <div class="bg-text" style="text-align: center;">
         <div id=outer><b>Body Mass Index (BMI) Calculator</b>
             <div id=cover>
                 <form name=fn>
@@ -114,7 +130,7 @@ $email = $_SESSION['email'];
                 }
         </script>
 
-
+	</div>
 
         
     </body>
