@@ -20,6 +20,7 @@ gatekeeper();
 $email = $_SESSION['email'];
 
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,7 +40,7 @@ $email = $_SESSION['email'];
 	  
         
     </head>
-    <body>
+    <body style="background-color: #e4f4e4;">
 	   <div class= "main" >
       <nav>
         <div class= "logo">
@@ -52,7 +53,7 @@ $email = $_SESSION['email'];
         </ul>
       </nav>
     </div>  
-	<div class="bg-output"> </div>    
+	
 	<div class="bg-text" style="top: 70%;">
         <div id=outer>
             <div id=cover>
@@ -132,4 +133,3 @@ $email = $_SESSION['email'];
         </script>   
     </body>
 </html>
-
