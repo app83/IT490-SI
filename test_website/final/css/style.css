@@ -315,3 +315,11 @@ button:hover {
 	padding: 20px;
 	text-align: center;
   }
+ 
+
+input[type="submit"] {
+	color: white;
+	background-color: black;
+	width: 100px;
+	height: 47px;	
+}
