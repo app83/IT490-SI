@@ -21,8 +21,6 @@ $email = $_SESSION['email'];
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 
