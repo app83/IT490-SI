@@ -44,7 +44,8 @@ $callback = function ($msg) {
     echo 'pass: ',$pass, "\n";
     echo 'type: ',$type, "\n";
 
-
+    $pass = sha1($pass);	
+	
     //Insert account into users table
     $sql = "INSERT INTO users (name, email, password) VALUES ('$name','$email','$pass')";
     ($t = mysqli_query( $connect, $sql )) or die(mysqli_error($connect));
