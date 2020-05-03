@@ -68,14 +68,3 @@ $ar = array($msg);
 $channel->close();
 $connection->close();
 ?>
-
-while ($channel->is_consuming()) {
-    $channel->wait();
-}
-
-$ar = array($msg);
-
-
-$channel->close();
-$connection->close();
-?>
