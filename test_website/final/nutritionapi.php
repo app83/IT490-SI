@@ -56,8 +56,8 @@ $email = $_SESSION['email'];
           <img src= "images/healtholic.jpeg" alt="" width="150" height="150">
         </div>
         <ul class= "nav-bar">
-	<li><a href="nutritionapi.html">Nutrition</a></li> 
-	<li><a href="bmi2.html">BMI Calculator</a></li> 	
+	<li><a href="nutritionapi.php">Nutrition</a></li> 
+	<li><a href="bmi2.php">BMI Calculator</a></li> 	
 	 <li><form action="logout.php"><input type="submit" value="Logout"></form></li>	
         </ul>
       </nav>
