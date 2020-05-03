@@ -20,7 +20,6 @@ gatekeeper();
 $email = $_SESSION['email'];
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,7 +29,6 @@ $email = $_SESSION['email'];
             #cover{border:2px solid #111;border-radius:1px;box-shadow:inset 0 0 13px #888;padding:7px 0}
             .main{table-layout:fixed;width:100%;border:0;border-collapse:collapse;margin:0 auto;}
             .main td{padding:0 8px;vertical-align:middle;text-align:left;border:0;font:500 11px arial}
-            .main input{width:96%;border:1px solid #ccc;margin:2px 0;padding:0 2%;height:17px;text-align:right;font:500 11px arial;background:none;}td.ac {text-align:center}
             .main select{width:100%;border:1px solid #ccc;margin:2px 0;background:#fff;height:18px;font:500 11px arial}.main button{width:100%;font:600 12px arial;margin:2px 0;}.w60{width:60%}.w40{width:40%}
             tr {
                 height: 60px;
@@ -42,15 +40,15 @@ $email = $_SESSION['email'];
         
     </head>
     <body>
-	 <div class= "main" >
+	   <div class= "main" >
       <nav>
         <div class= "logo">
           <img src= "images/healtholic.jpeg" alt="" width="150" height="150">
         </div>
         <ul class= "nav-bar">
-	<li><a href="nutritionapi.php">Nutrition</a></li> 
-	<li><a href="bmi2.php">BMI Calculator</a></li> 	
-	 <li><form action="logout.php"><input type="submit" value="Logout"></form></li>	
+    <li><a href="nutritionapi.html">Nutrition</a></li> 
+    <li><a href="bmi2.html">BMI Calculator</a></li>     
+     <li><form action="logout.php"><input type="submit" value="Logout"></form></li> 
         </ul>
       </nav>
     </div>  
@@ -133,3 +131,4 @@ $email = $_SESSION['email'];
         </script>   
     </body>
 </html>
+
