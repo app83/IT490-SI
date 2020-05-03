@@ -21,6 +21,8 @@ $email = $_SESSION['email'];
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 
@@ -38,6 +40,9 @@ $email = $_SESSION['email'];
             text-align: left;
             padding: 8px;
         }
+        tr:nth-child(odd) {
+            background-color:white;
+        }
 
         tr:nth-child(even) {
             background-color: #dddddd;
@@ -46,8 +51,8 @@ $email = $_SESSION['email'];
 	<link rel= "stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
-	<div class= "main">
+<body style="background-color: #e4f4e4;">
+	<div class= "main" >
       <nav>
         <div class= "logo">
           <img src= "images/healtholic.jpeg" alt="" width="150" height="150">
@@ -59,11 +64,13 @@ $email = $_SESSION['email'];
         </ul>
       </nav>
     </div>
-    <div class="bg-output"> </div> 
- <div class="bg-text">
-    <h3>Nutrition Search</h3>
-
-    <input onkeyup="search()"" type=" text" id="myText" value="">
+   <div style="text-align: center;">
+       <div>
+        <h3>Nutrition Search</h3>
+        <input onkeyup="search()" type=" text" id="myText" value="">
+       </div>
+   </div>
+   
     <div id="searchresults"></div>
     <p id="demo"></p>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -101,7 +108,6 @@ $email = $_SESSION['email'];
                 );
         }
     </script>
-</div>
 </body>
 
 </html>
