@@ -52,6 +52,7 @@ $email = $_SESSION['email'];
         </ul>
       </nav>
     </div>  
+	<div class="bg-output"> </div>    
 	<div class="bg-text" style="top: 70%;">
         <div id=outer>
             <div id=cover>
