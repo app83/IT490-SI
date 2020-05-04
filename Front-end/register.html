@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <title>Healthaholics | Registration</title>
+    <link rel= "stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <!-- added a bootstrap library for styles -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+
+     <div class= "main">
+      <nav>
+        <div class= "logo">
+        <img src= "images/healtholic.jpeg" alt="" width="150" height="150">
+        </div>
+        <ul class= "nav-bar">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+	  <li><a href="register.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="bg-image"> </div>
+      <div class="bg-text">
+      <form action="register.php" method="post">
+        <div class="container">
+          <h1 style="margin-bottom: -10px; color: black;">Sign Up</h1>
+          <p style="color: black;">Please fill in this form to create an account.</p>
+          <hr>
+          <div class="input-container" >
+          <div style="width: 100%;">
+	<label>Name: </label></br>
+          <input  type="text" placeholder="Enter Full Name" name="name" id="name" required><br>
+	<label>Email: </label></br>
+          <input  type="text" placeholder="Enter Email" name="email" id="email" required><br>
+	<label>Password: </label></br>
+          <input  type="password" placeholder="Enter Password" name="pass" id="pass" required><br>
+        </div>
+        </div>
+        </div>
+
+      <div class="clearfix">
+        <button name="register" class="signupbtn" type="submit" id="register" value="register">Sign Up</button>
+      </div>
+</form>
+</div>
+    </div>
+  </body>
+</html>
