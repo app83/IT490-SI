@@ -88,7 +88,7 @@ $email = $_SESSION['email'];
                     myObj = resultsData
                     txt += "<table border='1'><tr><th>Food</th><th>Image</th><th>Energy</th><th>Calories</th></tr>"
                     $.each(resultsData, function (index, value) {
-                        const food = food
+                        const food = value.food
                         const brand = food.brand ? food.brand : ''
                         const label = food.label ? food.label : ''
     
