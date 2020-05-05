@@ -17,6 +17,7 @@ This will be used to store user information. Will store information such as ID, 
 # Resources
 * [Oracle VM VirtualBox](https://www.virtualbox.org/)
 * [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04.4/)
+* [Apache](https://httpd.apache.org/docs/)
 * [PHPMyAdmin](https://docs.phpmyadmin.net/en/latest/)
 * [RabbitMQ](https://www.rabbitmq.com/documentation.html)
 * [Edamam API](https://developer.edamam.com/)
