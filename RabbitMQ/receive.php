@@ -68,6 +68,9 @@ $callback = function ($msg) {
 			return false ;
 		} ;		
 	}
+	else { 
+		exit();
+	}
 };
 
 
