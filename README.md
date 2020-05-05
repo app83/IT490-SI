@@ -12,7 +12,7 @@ This will have the user interface (UI) and the users will be able to interact wi
 Will be used to help communication between the different services; an intermediary service. Assists with sending and receiving messages, primarily for sending registration requests and assisting with login authentication. 
 
 # Back-end | Database & API
-This will be used to store user information. Will store information such as ID, Name, Email, Password, etc. 
+This will be used to store user information. Will store information such as `ID`, `Name`, `Email`, `Password`, etc. 
 
 # Resources
 * [Oracle VM VirtualBox](https://www.virtualbox.org/)
