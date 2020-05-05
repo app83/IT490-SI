@@ -1,4 +1,4 @@
-# `IT490`: Systems Integration [Group 5] - *Healthaholic*
+# IT490: Systems Integration | Group 5 | *Healthaholic*
 America is facing a high-level problem of obesity and in order to help solve this problem people need help maintaining their nutrition information, so this website provides nutritional facts and gives recommendations on what type of exercise needs to be done to digest the food they are eating. Also, if we have time then the feature we will be adding is that we would be able to tell customers the nearby restaurants and would give the nutritional data of the menus to the customer. 
 To provide a website for those who are health conscious, so they can keep their health in good condition based on their input of their personal information and provide suggestions of what they can do to stay healthy.  
 
