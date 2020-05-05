@@ -24,31 +24,50 @@ $callback = function ($msg) {
 	$connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 	mysqli_select_db($connect, $dbname) or die("Could not open the db '$dbname'");
 
-
-    echo ' [x] Message Received ', $msg->body, "\n";
-    
-    //Converts msg to string & decodes
-    $aMsg = $msg->body;
-    $newMsg = "[{$aMsg}]";
-    $arr = json_decode($newMsg, true);
-
-    //Stores information into vars
-    $name = $arr[0]["name"];
-    $email = $arr[0]["email"];
-    $pass = $arr[0]["pass"];
-    $type = $arr[0]["type"];
-
-    //Prints separated vars
-    echo 'name: ',$name, "\n";
-    echo 'email: ',$email, "\n";
-    echo 'pass: ',$pass, "\n";
-    echo 'type: ',$type, "\n";
-
-    $pass = sha1($pass);	
+	echo ' [x] Message Received ', $msg->body, "\n";
 	
-    //Insert account into users table
-    $sql = "INSERT INTO users (name, email, password) VALUES ('$name','$email','$pass')";
-    ($t = mysqli_query( $connect, $sql )) or die(mysqli_error($connect));
+	
+	//Converts msg to string & decodes
+	$aMsg = $msg->body;
+	$newMsg = "[{$aMsg}]";
+	$arr = json_decode($newMsg, true);
+	
+	
+	//Stores information into vars
+	$name = $arr[0]["name"];
+	$email = $arr[0]["email"];
+	$pass = $arr[0]["pass"];
+	$type = $arr[0]["type"];
+	
+	//Prints separated vars || For Testing Purposes
+	echo 'name: ',$name, "\n";
+	echo 'email: ',$email, "\n";
+	echo 'pass: ',$pass, "\n";
+	echo 'type: ',$type, "\n";
+
+	//Hash Passwords before compare or register
+	$pass = sha1($pass);	
+	
+	
+	if ( $type = "register" ) {
+		//Insert account into users table
+		$sql = "INSERT INTO users (name, email, password) VALUES ('$name','$email','$pass')";
+		($t = mysqli_query( $connect, $sql )) or die(mysqli_error($connect));
+	}
+	else if ( $type = "login" ) {
+		//Compare login input & compare with database | authenticate
+		$s = "SELECT * FROM users WHERE email='$email' AND password='$pass' " ;
+		( $t = mysqli_query($db, $s) ) or die ( mysqli_error( $db ) );
+		
+		$num = mysqli_num_rows($t) ;
+	
+		if ( $num > 0 ) {
+			return true ;
+		}
+		else {
+			return false ;
+		} ;		
+	}
 };
 
 
